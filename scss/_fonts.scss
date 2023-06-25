@@ -1,0 +1,25 @@
+/* Fonts */
+
+@font-face {
+  font-family: "DM serif";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/dmserifdisplaylatinregular.woff2") format("woff2"),
+       url("../fonts/dmserifdisplaylatinregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-weight: normal;
+  font-display: swap;
+  src: url("../fonts/karlalatinregular.woff2") format("woff2"),
+       url("../fonts/karlalatinregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Karla";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/karlalatinbold.woff2") format("woff2"),
+       url("../fonts/karlalatinbold.woff") format("woff");
+}

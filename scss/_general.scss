@@ -1,0 +1,28 @@
+
+/* General styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: var(--main-ff);
+  font-weight: var(--main-fw);
+  font-size: var(--main-fz);
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.site-main {
+  flex-grow: 1;
+}

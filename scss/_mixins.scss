@@ -1,0 +1,71 @@
+@mixin layout($display:flex, $jc:space-between, $ai:center) {
+  display: $display;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin view($miw, $pad, $t-layout:center, $bdw, $bdc, $bdrs) {
+  min-width: $miw;
+  width: 100%;
+  padding: $pad;
+  text-align: $t-layout;
+  border: $bdw solid $bdc;
+  border-radius: $bdrs;
+} 
+
+@mixin default-text($bottom:0, $ff, $fz:16, $fw:400, $lh, $color:inherit) {
+  margin-top: 0;
+  margin-bottom: $bottom;
+  font-family: $ff;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $color;
+}
+
+@mixin links ($display, $color:inherit) {
+  display: $display;
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin list-unstyled {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin background ($bgc:#fff, $address:none, $repeat: repeat, $position:0 0, $bgsize:none) {
+  background-color: $bgc;
+  background-image: url($address);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $bgsize;
+}
+
+@mixin transition ($property) {
+  transition: $property 0.4s ease;
+}
+
+@mixin hover ($color, $bgc) {
+  color: $color;
+  background-color: $bgc;
+}
+
+@mixin psevdo-el ($display:block, $width, $height, $address, $bgp:0 0) {
+  display: $display;
+  width: $width;
+  height: $height;
+  background-image: url($address);
+  background-position: $bgp;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+}
+
+@mixin responsive($min) {
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}
