@@ -6,14 +6,13 @@
 
 @mixin view($miw, $pad, $t-layout:center, $bdw, $bdc, $bdrs) {
   min-width: $miw;
-  width: 100%;
   padding: $pad;
   text-align: $t-layout;
   border: $bdw solid $bdc;
   border-radius: $bdrs;
 } 
 
-@mixin default-text($bottom:0, $ff, $fz:16, $fw:400, $lh, $color:inherit) {
+@mixin default-text($bottom:0, $ff:var(--main-ff), $fz:13px, $fw:400, $lh:normal, $color:inherit) {
   margin-top: 0;
   margin-bottom: $bottom;
   font-family: $ff;
@@ -23,7 +22,7 @@
   color: $color;
 }
 
-@mixin links ($display, $color:inherit) {
+@mixin links ($display:block, $color:inherit) {
   display: $display;
   color: $color;
   text-decoration: none;

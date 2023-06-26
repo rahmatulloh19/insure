@@ -21,6 +21,7 @@
   position: absolute;
   top: 80px;
   left: 0;
+  z-index: 5;
   display: none;
   width: 100%;
   height: calc(100vh - 80px);
@@ -79,9 +80,16 @@
     margin-bottom: 0;
   }
   
+  .navigation__link {
+    font-size: var(--main-fz);
+  }
+
   .site-header__link {
     @include view(146px, 9px 16px 7px, $bdw:2px, $bdc:var(--main-text-color), $bdrs:0);
     width: auto;
+    padding: 13px 16px 12px;
+    font-size: var(--main-fz);
+    line-height: normal;
     margin-left: 25px;
   }
 }
