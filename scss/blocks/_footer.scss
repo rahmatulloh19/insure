@@ -1,10 +1,119 @@
 /* Footer styles begin */
 
 .ftr {
-  position: static;
-  height: 120px;
+  padding: 88px 0;
   background-color: #fafafa;
+  background-image: url("../../images/footerbg.svg");
+  background-repeat: no-repeat;
+  background-position: left -150px top -500px;
 }
 
+.logo--ftr {
+  display: inline-block;
+  margin-bottom: 32px;
+}
 
+.start {
+  text-align: center;
+}
+
+.start__social {
+  margin-bottom: 40px;
+  color: var(--secondary-text-color);
+}
+
+.start__link {
+  @include links(inline-block);
+  
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.ftr__line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 40px;
+  background-color: #dadada;
+}
+
+.end {
+  font-family: var(--secondary-ff);
+  letter-spacing: 1.5px;
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.end__inner {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.end__important {
+  @include default-text(36px, var(--secondary-ff), $fz:13px);
+  display: inline-block;
+  margin-bottom: 36px;
+}
+
+.end__list {
+  @include list-unstyled;
+}
+
+.end__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.end__link {
+  @include links;
+  color: var(--mix-color);
+}
+
+@include responsive(768px) {
+  .start {
+    @include layout($jc:space-evenly);
+  }
+  
+  .end__inner {
+    @include layout($jc:space-evenly);
+  }
+}
+
+@include responsive(1150px) {
+  .ftr {
+    background-position-y: -385px;
+  }
+
+  .start {
+    justify-content: space-between;
+  }
+
+  .start__link {
+    @include transition(color);
+    &:hover {
+      color: var(--main-text-color);
+    }
+  }
+  
+  .end {
+    @include layout($ai:flex-start);
+    text-align: left;
+  }
+  
+  .end__inner {
+    display: block;
+    max-width: 255px;
+    width: 100%;
+  }
+
+  .end__link {
+    display: inline-block;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 /* Footer styles end */

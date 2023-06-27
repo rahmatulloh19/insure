@@ -5,7 +5,7 @@
 }
 
 .site-main__article-inner {
-  @include background(var(--mix-color), "../../images/decoration.svg", no-repeat, calc(50% + 197px) -136px, 467px 435px);
+  @include background(var(--mix-color), "../../images/decoration.svg", no-repeat, right -264px top -125px, 467px 435px);
   padding: 72px 24px;
   text-align: center;
   color: #fff;
@@ -50,6 +50,11 @@
   }
 }
 @include responsive(1150px) {
+  .site-main__article-inner {
+    padding: 69px 81px;
+    background-position: right -322px top -262px;
+  }
+
   .site-main__artilce-link {
     @include transition(background-color);
 
