@@ -16,6 +16,7 @@ body {
   font-family: var(--main-ff);
   font-weight: var(--main-fw);
   font-size: var(--main-fz);
+  overflow-x: hidden;
 }
 
 img {
@@ -25,4 +26,5 @@ img {
 
 .site-main {
   flex-grow: 1;
+  overflow-x: hidden;
 }
